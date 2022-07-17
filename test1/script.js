@@ -31,9 +31,8 @@ class square{
     }
 
     moveX(i){
-        // i should be 1 or -1
+        // i = number of steps
         if(!this.boxCollisionX(i)){
-            // console.log(this.boxCollisionX(i));
             ctx.clearRect(this.x, this.y, 100, 100);
             this.x += 100 * i;
             this.draw();
@@ -41,7 +40,7 @@ class square{
     }
 
     moveY(i){
-        // i should be 1 or -1
+        // i = number of steps
         if(!this.boxCollisionY(i)){
             ctx.clearRect(this.x, this.y, 100, 100);
             this.y -= 100 * i;
