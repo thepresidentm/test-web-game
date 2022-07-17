@@ -17,18 +17,36 @@ class square{
         ctx.fill();
     }
 
+    boxCollisionX(i){
+        i = -i;
+        return (
+            this.x == canvas.width + 100 * i || this.x + i == 1
+        )
+    }
+
+    boxCollisionY(i){;
+        return (
+            this.y == canvas.height + 100 * i || this.y + i == 1
+        )
+    }
+
     moveX(i){
         // i should be 1 or -1
-        ctx.clearRect(this.x, this.y, 100, 100);
-        this.x += 100 * i;
-        this.draw();
+        if(!this.boxCollisionX(i)){
+            // console.log(this.boxCollisionX(i));
+            ctx.clearRect(this.x, this.y, 100, 100);
+            this.x += 100 * i;
+            this.draw();
+        }
     }
 
     moveY(i){
         // i should be 1 or -1
-        ctx.clearRect(this.x, this.y, 100, 100);
-        this.y -= 100 * i;
-        this.draw();
+        if(!this.boxCollisionY(i)){
+            ctx.clearRect(this.x, this.y, 100, 100);
+            this.y -= 100 * i;
+            this.draw();
+        }
     }
 }
 
