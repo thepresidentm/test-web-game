@@ -117,7 +117,7 @@ document.addEventListener("keypress", (event)=>{
     let letra = event.key.toLowerCase();
     if(letra == 'x'){
         console.log('avance');
-        // Si ambas operaciones se ejecutan en el mismo for, el contedo de vecinos
+        // Si ambas operaciones se ejecutan en el mismo for, el conteo de vecinos
         // se hara mientras se estan cambiando los status
         for(let y = 0; y < 10; y++){
             for(let x = 0; x < 10; x++){
